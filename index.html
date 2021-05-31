@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TITLE</title>
+
+    <!-- meta information -->
+    <meta name="author" content="Max Grüntgens" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="resources/img/favicon.png" />
+    <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+    <!-- CSS reset and grid -->
+    <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+    <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+
+    <!-- styles for included libraries -->
+
+    <!-- chartist -->
+    <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
+
+    <!-- codemirror -->
+    <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+    <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
+
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+    <!-- standard presentation styles -->
+    <link href="resources/css/style.css" rel="stylesheet" />
+
+    <!-- custom presentation styles -->
+    <link href="resources/css/custom.css" rel="stylesheet" />
+
+    <!-- js needed in head -->
+
+    <!-- greuler -->
+    <script src="vendor/d3/d3-3.5.6.js"></script>
+    <script src="vendor/cola/cola.v3.min.js"></script>
+    <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+
+   
+    
+
+    <!-- html5 dataset shim for IE -->
+    <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="fallback-message">
+        <p>
+            Your browser <strong>doesn't support the features required</strong> by impress.mod.js,
+            so you are presented with a simplified version of this presentation.
+        </p>
+        <p>
+            For the best experience please use the latest <strong>Chrome</strong>, <strong>Safari</strong>
+            or <strong>Firefox</strong> browser.
+        </p>
+    </div>
+
+    <div id="impress">
+
+        <div class="step">
+            <h4><strong>1.6.2021</strong> | <a href="#">Katholische Universität Eichstätt-Ingolstadt</a></h4>
+
+            <h1 class="down-100">Datenbanken & Geisteswissenschaften</h1>
+
+            <h2 class="red up-25">eine kurze Kontextualisierung der Nutzung von Datenbanken in der geisteswissenschaftlichen Forschung</h2>
+
+            <h4 class="down-100">
+                <strong>Slides:</strong>
+                <a href="#" title="View the presentation online">
+                    Link
+                </a>
+            </h4>
+
+            <h5>
+                <strong><a href="https://orcid.org/0000-0001-8736-9393">Max Grüntgens</a></strong> |
+                <img src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter" class="twitter-icon" />
+                <a href="https://twitter.com/digicademy" title="Digital Academy on Twitter">@digicademy</a> |
+                <img src="resources/img/Octicons-mark-github.svg" alt="Twitter" class="gh-icon" />
+                <a href="https://github.com/digicademy/" title="Digital Academy on GitHub">digicademy</a> |
+                <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
+            </h5>
+        </div>
+
+        <div class="step">
+            <h2 class="red">Table of Contents</h2>
+            <ol class="line-height-one-five">
+                <li>
+                    Forschungsdesign & Wissensmanagement
+                </li>
+                <li>
+                    Brauche ich eine Datenbank – und wenn ja, wie viele?
+                </li>
+                <li>
+                    Fazit
+                </li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h1 class="red">01</h1>
+            <h2 class="line-height-one-five">
+                Forschungsdesign & Wissensmanagement
+            </h2>
+        </div>
+
+        <div class="step">
+            <ul>
+                <li><strong>Forschung</strong>: Was macht geisteswissenschaftliches Forschen und Arbeiten aus?</li>
+                <li><strong>Nachvollziehbarkeit</strong>: Reliabilität und Validität, Nachvollziehbarkeit und Nachprüfbarkeit</li>
+                <li><strong>Wissen, Daten und Information</strong>: explizites und implizites, kodifiziertes und personengebundenes Wissen, digitale Daten, Information als Entscheidung</li>
+                <li><strong>Modelle</strong>: Explizierung, Reduktion, Verzerrung</li>
+                <li><strong>Komplexitätsreduktion</strong>: Formalisierung und Operationalisierung</li>
+                <li><strong>Wissensmanagement</strong>: Konzeption, Zettelkasten, Notizbuch, Datenbank, …</li>
+                <li><strong>Digitalisierung</strong>: Geschlossene Operationssysteme & Anschlussfähigkeit</li>
+            </ul>
+        </div>
+
+        <div class="step">
+                <h3 class="red">Forschung</h3>
+                <blockquote>… must predict or infer phenomena that they cannot observe at the time of their research. … the issue is what can be legitimately inferred from available texts. (16)</blockquote>
+                <blockquote>… can best use computers in their research by thinking of them as aids, not as replacements for the highly developed human capabilities of reading, transcribing, and translating written matter. (23)</blockquote>
+                <blockquote> Ultimately, all reading of texts is qualitative [<em>oder</em> interpretive], even when certain characteristics of a text are later convertet into numbers. (21)</blockquote>
+                <blockquote>… involve[s] the rearticulation (interpretation) of given texts into new (analytical, deconstrucive, emancipatory, or critical) narratives accepted within particular scholarly communities […]. (22)</blockquote>
+                <p class="small">
+                    Literatur: Krippendorff: Content Analysis. 2019, 16–22.
+                </p>
+            </div>
+
+        <div class="step">
+            <h3 class="red">Nachvollziehbarkeit</h3>
+            <blockquote>Replicability is the most important form of reliability. […] For a process to be replicable, it must be governed by rules that are explicitly stated and applied equally to all units of analysis. (24–25)</blockquote>
+            <blockquote>[V]alidity goes further, demanding that the researcher’s process of sampling, reading, and analyzing messages ultimately satisfy external criteria. (25)</blockquote>
+            <blockquote>Replicability is measurable, and validity is testable, but objectivity is neither. (25)</blockquote>
+            <p class="small">
+                Literatur: Krippendorff: Content Analysis. 2019, 24–25.
+            </p>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Wissen, Daten, Information</h3>
+            <blockquote>Texts, messages, and symbols never speak for themselves. They inform someone. Information allows a  reader to select among alternatives. It narrows the range of interpretations otherwise available. (30)</blockquote>
+            <blockquote>All theories of reading (hermeneutics) and theories of symbolic forms (semiotics), include theories of message meanings (communication/conversation theory), can be operationalized as processes of moving from texts to the contexts of the texts’ use.</blockquote>
+            <blockquote>Historiographical [und andere] methods organize available documents [und Wissen, Daten, Information] into webs of inferential relationships that may ultimately answer a historian’s questions. (32)</blockquote>
+            <p>Modellbildung, implizite Theoriebildungen, Interpretationsentscheidungen, u.a.m. werden durch Code expliziert.</p>
+            <p class="small">
+                Literatur: Krippendorff: Content Analysis. 2019, 30–32.
+            </p>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Modelle</h3>
+            <ul>
+                <li>… eine <strong>Abbildung</strong> von etwas.</li>
+                <li>… eine <strong>reduktionistische</strong> und damit immer eine verkürzte Darstellung.</li>
+                <li>… pragmatisch in seiner Stellvertreter- oder <strong>Ersatzfunktion</strong>.</li>
+            </ul>
+            <p>→ Ein Modell zielt auf einen spezifischen Nutzungskontext bzw. ein spezifisches <strong>Nutzungskonzept</strong> ab.</p>
+            <p>→ Ein Modell reduziert (unbestimmte) Komplexität, um <strong>Anschlussfähigkeit</strong> und damit neue (kombinatorische) Komplexität zu ermöglichen.</p>
+            <p>→ Ein Modell ist in seinem Verhältnis zur wissenschaftlichen Praxis</p>
+            <ul>
+                <li>augmentierend, da es (arbeitsökonomisch) <strong>unterstützt</strong>,</li>
+                <li><strong>(de)zentrierend</strong>, da es Aspekte in den Vordergrund bzw. die Peripherie rückt</li>
+                <li>und <strong>lenkend</strong>, da es geleitete Zugriffe bietet & damit determiniert.</li>
+            </ul>
+            <p class="small">
+                Literatur: Stachowiak: Allgemeine Modelltheorie. Wien u.a. 1973, 128–133; Historical Social Research (18), Suppl. 31 – <a href="https://www.gesis.org/hsr/aktuelle-hefte/2018/suppl-31-models-and-modelling-between-digital-and-humanities">Models and Modelling between Digital and Humanities</a>.
+            </p>
+        </div>
+
+        <div class="step">
+            <p>Die dem Formalisierungs-Prozess einer Modellbildung notwendig inhärente reduktionistische und zentrierende Tendenz führt notwendigerweise zu <strong>Verzerrungseffekten</strong>.</p>
+            <p> Verzerrungseffekte treten …</p>
+            <ul>
+                <li>… bereits in der <strong>Datenbasis</strong> selbst auf (Unvollständigkeit, Samplingprozess, …).</li>
+                <li>… während der <strong>Prozessierung</strong> der Datenbasis auf (Statistik, Verarbeitungsfehler, …).</li>
+                <li>… bei einer notwendigen <strong>Dimensionsreduktion</strong>, bei der <strong>Kontextualisierung</strong> und bei einer Übersetzungs- oder <strong>Rekonstituierungsleistung</strong> auf (Kartierung, Interpretation, Reproduktion, …).</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Formalisierung und Operationalisierung</h3>
+            <ul>
+                <li>… dienen beide zur <strong>Explizierung</strong> und <strong>Quantifizierung</strong> …</li>
+                <li>… fußt notwendigerweise auf einer qualitativen, interpretatorischen und damit <strong>klassenbildenden Grundlage</strong> …</li>
+                <li>… und funktionieren damit innerhalb eines oder in Bezug auf ein <strong>Modell</strong>.</li>
+            </ul>
+            <p><strong>Formalisierung</strong> (im Sinne eines Kalküls) kann verstanden werden als</p>
+            <ul class="small">
+                <li>… eine <strong>Funktion</strong>, die bestimmte <strong>Parameter</strong> entgegennimmt und verarbeitet … </li>
+                <li>… und ein (quantifiziertes) <strong>Ergebnis</strong> zurückgibt (das auf qualitative Kategorien abgebildet werden kann) …</li>
+                <li>… und damit zum Testen von Hypothesen eingesetzt werden kann (<strong>Falsifikation</strong>).</li>
+            </ul>
+            <p><strong>Operationalisierung</strong> kann verstanden werden als</p>
+            <ul class="small">
+                <li>… die <strong>Messbarmachung</strong> eines Phänomens … </li>
+                <li>… und die <strong>Bereitstellung</strong> desselben als Parameter einer Funktion.</li>
+            </ul>
+            <p class="small">
+                Literatur: Moretti: ‘<a href="https://litlab.stanford.edu/LiteraryLabPamphlet6.pdf">Operationalizing</a>’: or, the Function of Measurement in Modern Literary Theory, 1–13; Bod: A New History of the Humanities: The Search for
+                Principles and Patterns from Antiquity to the Present, 2, 9, 347, 352, 364–5; Seelig: Praxis empirischer Untersuchungen. Anleitung zur Durchführung … Disziplinen. 23–57;
+                Cady: The Data Science Handbook.              
+            </p>
+        </div>
+
+        <div class="step">
+            <h3  class="red">Wissensmanagement</h3>
+            <ul>
+                <li>Wissensmanagemengt verstanden als <strong>hermeneutische Spirale</strong> aus Rezeption, Interpretation und Synthese/Produktion von Wissen.</li>
+                <li>Datenbanken sind <strong>Werkzeuge</strong> des Wissensmanagements (aber nicht die einzigen).</li>
+                <li>Datenbanken können dabei helfen <strong>implizite Aspekte</strong> von Forschung <strong>explizit zu machen</strong>, um sie zu verarbeiten, zur Diskussion zu stellen oder einfach um Prozesse transparenter zu gestalten.</li>
+                <li>Datenbanken müssen in übergeordnetere <strong>Prozesse</strong> des Wissensmanagements <strong>eingebunden</strong> sein, d.h. ihrer Nutzung gehen Abstraktions-, Kommunikations- und Modellierungsprozesse voraus.</li>
+                <li>Zentrale Konzeptionsmethode: <strong>Domain Driven Design</strong></li>
+            </ul>
+            <p class="small">
+                Literatur: Evans: Domain-Driven Design.Tackling Complexity in the Heart of Software; Grüntgens, Kasper: Nachhaltige Konzeptionsmethoden für Digital Humanities Projekte am Beispiel der Goethe-PROPYLÄEN. 
+            </p>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Digitalisierung</h3>
+            <ul>
+                <li>Digitalisierung meint die <strong>Rekonstituierung</strong> (Reproduktion) eines nicht-digitalen Systems (und damit auch einer Struktur) mit den Elementen eines digitalen Systems.</li>   
+                <li>Digitale und nicht-digitale Systeme sind <strong>operational getrennt</strong>, d.h. digitale Operationen sind nicht anschlussfähig für nicht-digitale Operationen.</li>
+                <li>D.h. die Ergebnisse digitaler Operationen müssen (und werden unbewusst) mehrschrittig <strong>mediatisiert</strong> werden, um (für Menschen) anschlussfähig zu sein.</li> 
+                <li>Digitale Systeme existieren nur im <strong>Prozess</strong>.</li>
+                <li>Datenbanken sind <strong>digitale Systeme</strong>.</li>
+            </ul>
+            <p class="small">
+                Literatur: Luhmann: Soziale Systeme; Luhmann: Die Wissenschaft der Gesellschaft.
+            </p>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Zwischenfazit</h3>
+            <ul>
+                <li>Datenbanken liegen als <strong>spezifische Werkzeuge und Hilfsmittel</strong> auf der Schnittstelle der oben angesprochenen Bereiche.</li>
+                <li>Datenbanken im besonderen und digitales Arbeiten im allgemeinen sind <strong>keine "Selbstläufer"</strong>.</li>
+                <li>Datenbanken (und andere digitale Werkzeuge) müssen <strong>sinnvoll und planvoll</strong> in bestehende Forschungsprozesse <strong>integriert</strong> werden, wenn ihre Nutzung erfolgreich sein soll.</li>         
+                <li>Das erzeugt <strong>Aufwand</strong>!</li>
+            </ul>   
+        </div>
+
+        <div class="step">
+            <h1 class="red">02</h1>
+            <h2 class="line-height-one-five">
+                Brauche ich eine Datenbank – und wenn ja, wie viele?
+            </h2>
+        </div>
+
+        <div class="step">
+            <h2 class="red">Datenbanken</h2>
+            <ol class="line-height-one-five">
+                <li>
+                    Voraussetzungen
+                </li>
+                <li>
+                    Arten von Datenbanken
+                </li>
+                <li>
+                    Suchmaschinen   
+                </li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3 class="line-height-one-five red">
+                Frage: Brauche ich eine Datenbank?
+            </h3>
+            <h3>
+                Antwort: Höchtswahrscheinlich (noch) nicht. Es kommt darauf an, wie ihr Forschungsprozess aussieht. Haben Sie das Problem, dass …
+            </h3>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Haben Sie das Problem, dass …</h3>
+            <ul>
+                <li>… Sie den Überblick über ihre Dokumente verlieren und es Ihnen schwer fällt eine Ablagestruktur/Organisation durchzuhalten?</li>
+                <li>… Sie Probleme haben konsistent zu annotieren oder zu exzerpieren?</li>
+                <li>… Sie keine strukturierten Abfragen auf Dokumentsammlungen durchführen können?</li>
+                <li>… Sie Ihre Daten nur sehr schwer visualisieren können?</li>
+                <li>… Sie Excel-Dateien mit mehr als 1.048.576 Zeilen und/oder mehr als 16.384 Spalten benutzen wollen?</li>
+                <li>… Sie mit einer großen Menge an hierarchischen, netzwerkartigen oder mehrdimensionalen Daten arbeiten wollen?</li>
+            </ul>
+            <p>Wenn Sie eine oder mehrere dieser Antworten mit "Ja" beantworten, kann die Nutzung einer Datenbank sinnvoll sein.</p>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Voraussetzungen</h3>
+            <p>Datenbanken existieren nicht im luftleeren Raum.</p>
+            <p>Die Nutzung einer Datenbank verlangt …</p>
+            <ul>
+                <li>… die Erstellung eines adäquaten <strong>Datenmodells</strong> im Kontext von Forschungsfrage, Fachdomäne und Material.</li>
+                <li>… die Auswahl einer spezifischen <strong>Datenbank-Technologie</strong>.</li>
+                <li>… die Einarbeitung in <strong>Definitions</strong>-, <strong>Abfrage</strong>- und <strong>Transformationssprachen</strong>.</li>
+                <li>… die Bereitstellung von <strong>Infrastruktur</strong> und <strong>Wartung</strong> der eigentlichen Datenbanksoftware und der Umgebung in der die DB läuft.</li>
+                <li>… die <strong>Aufbereitung</strong> und den <strong>Import</strong> von Daten.</li>
+            </ul>
+            <p>Die Nutzung von Datenbanken verlangt zumindest einen <strong>initialen Aufwand</strong> in den Bereichen Konzeption, Datenmodellierung, Aufbereitung und Infrastruktur!</p>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Exkurs</h3>
+            <h3>Alternativen zur eigenen Datenbank</h3>
+            <ul class="small">
+                <li>Tabellen + X: Microsoft-Excel, CSV-Tabellen, Knime, OpenRefine, SPSS, R/Python, …</li>
+                <li><a href="https://www.zotero.org/">Zotero</a>: Bibliographie-Datenbank mit umfangreichen Zusatzfeatures.</li>
+                <li><a href="https://voyant-tools.org/">Voyant-Tools</a>: Browser-basierte Texte-Analayse- und -Visualisierungs-Suite.</li>
+                <li><a href="https://www.maxqda.de/">MaxQDA</a>: Proprietäre Software zur qualitativen (und mit Einschränkungen quantitativen) Datenanalyse.</li>
+                <li><a href="https://oxgarage.tei-c.org/">OxGarage</a>: Transformations-Tool zu TEI-XML.</li>
+                <li><a href="https://www.oxygenxml.com/doc/versions/23.1/ug-editor/topics/editing-xml-documents-author.html">oXygen XML-Editor</a>: Eine der besten XML-Entwicklungsumgebungen. 
+                    Der Author-Mode bietet die Möglichkeit zur Erstellung von Eingabe- und Analyse-Oberflächen. Ein Beispiel dafür ist die Editionsumgebung <a href="https://www.ediarum.org/">Ediarum</a>.</li>
+                <li><a href="https://nodegoat.net/">Nodegoat</a>: ermöglicht es Wissenschaftlern, Datensätze auf der Basis ihres eigenen Datenmodells zu erstellen und bietet relationale Analyse- und Visualisierungsmodi mit räumlichen und chronologischen Formen der Kontextualisierung.</li>
+                <li><a href="https://www.pgadmin.org/">pgAdmin</a>: Administrations-Oberfläche für postgreSQL-Datenbanken.</li>
+                <li>Python, <a href="https://www.youtube.com/watch?v=ZlJ4NZoj1Lk">Pandas</a> und <a href="https://jupyter.org/">Jupyter Notebooks</a>: Interaktive Datenanalyse mit Python im Browser.</li>
+                <li><a href="https://www.elastic.co/guide/index.html">Lokale Suchmaschine</a>: lokale Indizierung von und Suche auf Dokumenten.</li>
+            </ul>
+            <p>Keine eigene Datenbank um der eigenen Datenbank willen! Die Chance ist hoch, dass es für Ihren <strong>Forschungsansatz</strong> bereits eine <strong>Softwarelösung</strong> gibt.</p>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Kurzdefinition Datenbank</h3>
+            <blockquote>Datenbanken sind <strong>spezialisierte Softwarelösungen</strong>, die als <strong>Werkzeuge</strong> 
+                <ul>
+                    <li>die Modellierung (Explizierung),</li>
+                    <li>die Verwaltung,</li>
+                    <li>die Speicherung,</li>
+                    <li>die Abfrage als Bereitstellung von Teilmengen und </li>
+                    <li>die Analyse</li>
+                </ul>
+                von großen Datenmengen <strong>unterstützen</strong>.
+            </blockquote>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Arten von Datenbanken</h3>
+            <p>Es gibt verschiedene Arten von Datenbanken, die sich durch ihr <strong>Datenmodell</strong>, ihre Abfrage- und <strong>Verarbeitungsmöglichkeiten</strong> und durch ihre <strong>Optimierungen</strong> unterscheiden. Eine für den geisteswissenschaftlichen Kontext 
+                sinnvolle Unterscheidung ist die folgende:
+            </p>
+            <ul>
+                <li><strong>Relationale Datenbanken</strong> (Tabellen: SQL)
+                    <ul>
+                        <li>MySQL/MariaDB</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </li>
+                <li><strong>Dokument-Datenbanken</strong> (Hierarchisch: Dateien, XML, JSON)
+                    <ul>
+                        <li>eXist (XML)</li>
+                        <li>MongoDB (JSON)</li>
+                    </ul>
+                </li>
+                <li><strong>Graph-Datenbanken</strong> (Netzwerk: Triple-Stores, Neo4j)
+                    <ul>
+                        <li>Neo4j</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Jede Datenbank-Art wird von unterschiedlichen Anbietern angeboten. Manche Angebote sind proprietär und kostenpflichtig, andere open source und ohne Lizenzzahlungen nutzbar.</p>
+        </div>
+
+        <div class="step">
+            <h4 class="red">Einige</h4>
+            <h3>Beispiele</h3>
+        </div>
+
+        <div class="step">
+            <h4 class="red">Relationale Datenbank</h4>
+            <h3>SQLite</h3>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Relationale Datenbank</h3>
+            <ul>
+                <li>Datenhaltung basiert auf <strong>Tabellen</strong>, also Zeilen, Spalten und Zellen.</li>
+                <li>Über eindeutige Werte (primary keys, foreign keys, join tables) können Zeilen zueinander <strong>in Bezug gesetzt</strong> werden.</li>
+                <li>Daten werden mit der <strong>Sprache SQL</strong> erstellt und abgefragt.</li>
+            </ul>
+            <blockquote>Je rigider, eindeutiger und "tabellenartiger" die Information strukturiert werden kann, desto besser ist SQL nutzbar. 
+                Geisteswissenschaftliche Datenbestände erfordern bei Abfrage, Datenhaltung, etc. oft erhöhte Komplexität in SQL. 
+            </blockquote>
+        </div>
+
+        <div class="step">
+            <h4 class="red">Dokumentdatenbank</h4>
+            <h3>eXist/XML</h3>
+        </div>
+
+        <div class="step">
+            <h3 class="red">XML-Datenbank</h3>
+            <ul>
+                <li>Datenhaltung basiert auf <strong>hierarchischer Klammerung</strong> von Elementen und Text (<strong>Baumstruktur</strong>).</li>
+                <li>Die Klammerung der Elemente hat <strong>semantische Bedeutung</strong>. <strong>Attribute</strong> bilden Information feingranular ab.</li>
+                <li>Daten werden mit der Sprache <strong>XML</strong> erstellt und mit <strong>XPath</strong>, <strong>XSLT</strong> und <strong>XQuery</strong> abgefragt.</li>
+            </ul>
+            <blockquote>Liegt das Augenmerk auf möglichst freier und "interpetativer" Annotation von Textbereichen auf Basis verschachtelter Hierarchien, dann ist XML die Anwendung der Wahl.
+                Das Abbilden überlappender Strukturen führt in XML zu erhöhter Komplexität.
+            </blockquote>
+        </div>
+
+        <div class="step">
+            <h4 class="red">Graphdatenbank</h4>
+            <h3>Neo4j</h3>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Graphdatenbank</h3>
+            <ul>
+                <li>Datenhaltung basiert auf <strong>Knoten</strong> und verbindenden <strong>Kanten</strong> (Relationen).</li>
+                <li><strong>Properties</strong> bilden Information feingranularer ab.</li>
+                <li>Daten werden mit der Sprache <strong>Cypher</strong> erstellt und abgefragt.</li>
+            </ul>
+            <blockquote>Sollen netzwerkartige Strukturen, die eher durch ihre Beziehung zueinander als durch ihre eigenen Attribute definiert sind, abgebildet werden, dann bietet sich Neo4j an.
+                Graphen haben keine Probleme mit überlappenden Strukturen, sind aber deutlich komplexer als (rein hierarchische) Ansätze mit XML. 
+            </blockquote>
+        </div>
+
+
+        <div class="step">
+            <h3 class="red">Suchmaschinen</h3>
+            <blockquote>Suchmaschinen, Searchengines und Module zur <strong>Such-Indizierung</strong> bereiten die Inhalte einer Datenbank derart auf, dass performanter gesucht werden kann. 
+                Zudem bieten eigentlich alle Suchmaschinen auch eine interne Prozessierung auf Basis von Natural Language Processing an, die es erlaubt <strong>lemmatisierte Suchen</strong> oder <strong>Fuzzy-Searches</strong> zu nutzen.</blockquote>
+        </div>
+
+        <div class="step">
+            <h4 class="red">Beispiel</h4>
+            <h3>LunrJS</h3>
+            <a href="lunr.html">Link</a>
+        </div>
+
+        <div class="step">
+            <h3 class="red">LunrJS</h3>
+            <ul>
+                <li>Die zu <strong>indizierenden Daten</strong> werden als <strong>JSON</strong>-Daten importiert.</li>
+                <li>Eine <strong>Suche</strong> erfolgt über <strong>JavaScript</strong>.</li>
+            </ul>
+            <pre class="small">
+                <code class="json">[ {
+    "name": "1864-05-01",
+    "text": "Sunday, May 1st, the 2nd Division 14th Army Corps ​still at Rosville Georgia.",
+    "tags": ""
+  }, {
+    "name": "1864-05-02",
+    "text": "Monday, 2nd – Marched to Ringgold distance 12 miles",
+    "tags": "movement"
+  }, {
+    "name": "1864-05-05",
+    "text": "Thursday. – 5th the Division marched one mile south of ​Taylors Rridge; The 34th went back to Ringgold to obain new guns. & got mail Saw some of the 75th",
+    "tags": "movement provisioning mail"    
+  }, {
+    "name": "1864-05-07",
+    "text": "Saturday, 7th Division marched to Buzard Roost skirmishing ​all the way. the 4th Army Core. took Tunnel Hill",
+    "tags": "movement combat"
+  }, {
+    "name": "1864-05-08",
+    "text": "Sunday, 8th Companies A F & B went on picket Saturday evening ​came of Sunday PM & the Regiment was sent to take ​a position on a hill. Company A deployed as skir​mishers. waded Mill Creek took a hill ​& fought till dark; then went to camp.",
+    "tags": "movement combat"
+  } ]               </code>
+            </pre>
+        </div>
+
+        <div class="step">
+            <h1 class="red">03</h1>
+            <h2 class="line-height-one-five">
+                Fazit
+            </h2>
+        </div>
+
+        <div class="step">
+            <h3 class="line-height-one-five red">
+                Fazit
+            </h3>
+            <ul>
+                <li>Digitales Arbeiten ist kein Selbstläufer, sondern erzeugt Aufwände.</li>
+                <li>Digitales Forschen kann nur dann gelingen, wenn es sinnvoll konzipiert und eingebettet wird.</li>
+                <li>Es gibt bereits viele gute Softwarelösungen für digital unterstützte geisteswissenschaftliche Forschung.</li>
+                <li>Jeder kann die eigene Forschungsarbeit durch digitale Komponenten ergänzen und erleichtern!</li>
+            </ul>
+        </div>
+
+
+
+        <div class="step">
+            <div class="centered">
+                <h1>F I N I S</h1>
+                <h2>Thank you</h2>
+            </div>
+        </div>
+
+
+        <div class="step">
+            <div class="centered">
+                <h1>Noch Fragen?</h1>
+                <h2>🤖</h2>
+            </div>
+        </div>
+
+
+
+        <div class="step">
+
+            <h2>Literatur</h2>
+
+            <blockquote>Eine kommentierte Literaturliste finden Sie <a href="lit.html">hier</a>.</blockquote>
+
+            <h4>Download</h4>
+            <ul class="small">
+                <li>
+                    <a href="#">
+                        Link to presentation
+                    </a>
+                </li>
+                <li>
+                    License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>, Author
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- jquery -->
+    <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+
+   
+
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="resources/js/hljs.linenumbering.js"></script>
+
+    <!-- magnific popup -->
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+    <script src="resources/js/magnific-popup.lightbox.js"></script>
+
+    <!-- impress.mod.js -->
+    <script src="vendor/impress/impress.fork.js"></script>
+    <script src="vendor/impress/impress-slidenum.js"></script>
+    <script>
+        var obj = impress();
+        obj.init();
+        initSlideNo(obj);
+    </script>
+</body>
+</html>

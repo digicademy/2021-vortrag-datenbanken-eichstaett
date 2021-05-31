@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--  LUNR-->
+     <script src="https://unpkg.com/lunr/lunr.js"></script>
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="resources/img/favicon.png" />
+    <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+    
+
+    <title>Document</title>
+    <style>
+        body {
+            display: block;
+            margin: auto;
+            width: 90vw;
+        }
+        #container {
+            width: 90%;
+        }
+
+        textarea {
+            width: 90%;
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Text-Suche</h2>
+        <p>
+            <input type="text" id="searchphrase">
+        </p>
+        <p>
+            <button id="lunr-suche">Suche</button>
+        </p>
+        <h3>Suchergebnisse</h3>
+        <div id="results">
+            
+
+        </div>
+    </div>
+</body>
+
+<script src="resources/js/searchengine.js" ></script>
+</html>

@@ -1,0 +1,18 @@
+SELECT cities.name, diarsentries.text, diarsentries.date 
+FROM city_diary 
+JOIN cities, diarsentries 
+ON city_diary.City_ID = cities.ID AND city_diary.Entry_ID = diarsentries.ID;
+
+
+SELECT cities.name, diarsentries.text, diarsentries.date 
+FROM city_diary 
+JOIN cities, diarsentries 
+ON city_diary.City_ID = cities.ID AND city_diary.Entry_ID = diarsentries.ID
+WHERE cities.name IS 'Ringgold';
+
+
+SELECT cities.name, cities.ID, city_diary.City_ID, city_diary.Entry_ID, diarsentries.ID, diarsentries.text, diarsentries.date 
+FROM city_diary 
+JOIN cities, diarsentries 
+ON city_diary.City_ID = cities.ID AND city_diary.Entry_ID = diarsentries.ID
+;
