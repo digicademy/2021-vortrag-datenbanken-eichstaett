@@ -377,6 +377,78 @@
         </div>
 
         <div class="step">
+            <h3 class="red">Beispiel: Die Quelle</h3>
+            
+            <blockquote style="height: 85vh">
+                <p><img src="resources/img/quelle_tagebuch.jpg" alt="Tagebuch" class="" style="width: auto;
+                    height: 85vh; float: right;"/></p>
+                <div class="small">
+                    <p>Sergeant Wiliam H. H. Enderton war während des Sezessionskrieges Soldat des 34ten Illinois Infanterie-Regiments. In seinem Tagebuch beschreibt er die Atlanta Campaign, das Ende des Krieges und auch Abraham Lincolns Ermordung.</p>
+                    <p>Das Tagebuch hat keinen Umschlag und ist lose mit Faden gebunden. Einige Seiten fehlen, welche die Einträge vom 20.8.1864 bis zum 2.9.1864 sowie die Einträge vom 13.9.1864 bis September 1864, beinhalten.</p>
+                    <p>Bereitgestellt durch Special Collections Dept. at the University of Iowa, Iowa Libraries. Online einsehbar in der <a href="https://digital.lib.uiowa.edu/islandora/object/ui%3Atestcwd_1688">Iowa Digital Library</a>. </p>
+                </div>
+            </blockquote>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Die Quelle: Forschungsfragen und Modellierungsansätze</h3>
+            
+            <blockquote style="height: 85vh">
+                <p><img src="resources/img/quelle_tagebuch.jpg" alt="Tagebuch" class="" style="width: auto;
+                    height: 85vh; float: right;"/></p>
+                <div class="small">
+                    <ul>
+                        <li>Basis-Erschließung:
+                            <ul>
+                                <li>Personen</li>
+                                <li>Orte</li>
+                                <li>Datierungen</li>
+                                <li>Strukturierung</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Textstruktur und Texttopographie:
+                            <ul>
+                                <li>Seiten</li>
+                                <li>Einrückungen von Tageseinträgen</li>
+                                <li>Kopfzeilen</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Text-Konstitution:
+                            <ul>
+                                <li>Auflösung von Abkürzungen</li>
+                                <li>Angabe von Texteingriffen durch den Autor Streichungen, Korrekturen, etc.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Inhaltliche Erschließung:
+                            <ul>
+                                <li>Sacherschließung:
+                                    <ul>
+                                        <li>Post und Briefverkehr</li>
+                                        <li>Versorgung und Verpflegung</li>
+                                        <li>Militärische Aufgaben </li>
+                                        <li>Truppenbewegung </li>
+                                        <li>Kampfhandlungen </li>
+                                        <li>Verluste</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Interpretative Erschließung:
+                                    <ul>
+                                        <li>Verluste</li>
+                                        <li>Dauer von Ereignissen</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </blockquote>
+        </div>
+
+        <div class="step">
             <h4 class="red">Relationale Datenbank</h4>
             <h3>SQLite</h3>
         </div>
@@ -393,6 +465,29 @@
             </blockquote>
         </div>
 
+        <div class="step">
+            <h3 class="red">Beispiel: Relationale Datenbank</h3>
+            <dl>
+                <dt>Primary Key</dt>
+                <dd>Eindeutiger Identifikator eines Datensatzes, d.h. einer Zeile in einer Tabelle.</dd>
+                <dt>many-to-many-Beziehung</dt>
+                <dd>Relationale Datenbanksysteme keine direkten Many-to-Many-Beziehung zwischen zwei Tabellen. Daher müssen Many-to-many-Beziehung in zwei One-to-many-Beziehungen aufgeteilt werden, indem Sie in eine dritte Tabelle, eine so genannte Join-Tabelle, verlagert werden.</dd>
+                <dt>Join-Tabelle</dt>
+                <dd>Jeder Datensatz in einer Join-Tabelle enthält ein Abgleichsfeld, das den Wert der Primärschlüssel der beiden Tabellen enthält, die er verknüpft.</dd>
+            </dl>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Beispiel: Relationale Datenbank</h3>
+            <p><img src="resources/img/db_diagram.png" alt="ERD" class="" /></p>
+            <blockquote>
+                Ein Tagebucheintrag kann mit null, einem oder sehr vielen Ortseinträgen verknüpft sein.
+                Ein Ortseintrag kann mit einem oder sehr vielen Tagebucheinträgen verknüpft sein. 
+                Die Beziehung zwischen Tagebucheintrag und Ortseintrag ist eine many-to-many-Beziehung.  
+            </blockquote>
+        </div>
+
+        
         <div class="step">
             <h4 class="red">Dokumentdatenbank</h4>
             <h3>eXist/XML</h3>
@@ -411,6 +506,39 @@
         </div>
 
         <div class="step">
+            <h3 class="red">Beispiel: XML</h3>
+            <dl>
+                <dt>Elemente</dt>
+                <dd>Machen Strukturen und Information explizit. Elemente werden hierarchisch ineinander verschachtelt.</dd>
+                <dt>Attribute</dt>
+                <dd>Attribute fügen Elementen zusätzliche Information auf Basis von Schlüssel-Wert-Paaren zu.</dd>
+                <dt>XPath</dt>
+                <dd>Abfragesprache, die Elemente auf Grundlage ihrer Verortung im Baum zurückgibt.</dd>
+            </dl>
+        </div>
+
+        <div class="step">
+            <h3 class="red">Beispiel: XML</h3>
+            <p><img src="resources/img/xml_ausschnitt.png" alt="XML" class="" /></p>
+            <blockquote>
+                Das Tagebuch fächert sich in Tageseinträge auf. Diese fächern sich wiederum in Text und in weitere Elemente, wie Personen-, Orts- oder Sach-Markup auf. Zentral ist, dass es sich um eine hierarchische Baumstruktur handelt, die Überlappungen verhindert. 
+            </blockquote>
+        </div>      
+        
+        <div class="step">
+            <h3 class="red">Beispiel: XML</h3>
+            <p><img src="resources/img/xml_erklaert.png" alt="XML_E" class="" /></p>
+          
+                <ol class="small">
+                    <li>Ein Tageseintrag mit Sacherschließung im Attribut corresp.</li>
+                    <li>Angabe eines Datums mit Normierung im Attribute when. Angabe von Unterstreichung.</li>
+                    <li>Angabe eines Ortsnamens mit Verweis auf normierte Ansetzung im Metadaten-Kopf.</li>
+                    <li>Angabe einer "Messung". Auflösung und Expandierung einer Abkürzung.</li>
+                </ol>
+       
+        </div>        
+
+        <div class="step">
             <h4 class="red">Graphdatenbank</h4>
             <h3>Neo4j</h3>
         </div>
@@ -426,6 +554,14 @@
                 Graphen haben keine Probleme mit überlappenden Strukturen, sind aber deutlich komplexer als (rein hierarchische) Ansätze mit XML. 
             </blockquote>
         </div>
+
+        <div class="step">
+            <h3 class="red">Beispiel: Neo4j</h3>
+            <p><img src="resources/img/graph.png" alt="Neo4j" class="" /></p>
+            <blockquote>
+                Der Hautstrang im Graph wird durch die Tageseintrags-Knoten gebildet. Diese enthalten den Text als Property. zusätzliche Informationen, um die herum sich Cluster bilden können, sind ebenfalls als Nodes angelegt: Orte, Topics. 
+            </blockquote>
+        </div>   
 
 
         <div class="step">

@@ -1,8 +1,28 @@
-SELECT cities.name, diarsentries.text, diarsentries.date 
+SQL
+
+SELECT * 
+FROM diarsentries;
+
+SELECT diarsentries.text
+FROM diarsentries;
+
+SELECT * 
+FROM diarsentries
+WHERE diarsentries.date IS '1964-05-05';
+
+SELECT * 
+FROM diarsentries
+WHERE diarsentries.schlagworte LIKE '%bewegung%';
+
+SELECT cities.name, cities.ID, city_diary.City_ID, city_diary.Entry_ID, diarsentries.ID, diarsentries.text, diarsentries.date 
 FROM city_diary 
 JOIN cities, diarsentries 
 ON city_diary.City_ID = cities.ID AND city_diary.Entry_ID = diarsentries.ID;
 
+SELECT cities.name, diarsentries.text, diarsentries.date 
+FROM city_diary 
+JOIN cities, diarsentries 
+ON city_diary.City_ID = cities.ID AND city_diary.Entry_ID = diarsentries.ID;
 
 SELECT cities.name, diarsentries.text, diarsentries.date 
 FROM city_diary 
@@ -10,9 +30,63 @@ JOIN cities, diarsentries
 ON city_diary.City_ID = cities.ID AND city_diary.Entry_ID = diarsentries.ID
 WHERE cities.name IS 'Ringgold';
 
+XML
 
-SELECT cities.name, cities.ID, city_diary.City_ID, city_diary.Entry_ID, diarsentries.ID, diarsentries.text, diarsentries.date 
-FROM city_diary 
-JOIN cities, diarsentries 
-ON city_diary.City_ID = cities.ID AND city_diary.Entry_ID = diarsentries.ID
-;
+//div[contains(@corresp, 'mail')]
+
+normalize-space(//div[contains(., 'Rosville')]/data())
+
+//div[contains(@corresp, 'casualties')]/preceding-sibling::div[1]
+
+
+NEO
+
+//CREATE Entries
+CREATE (a:Entry {text: "Sunday, May 1st, the 2nd Division 14th Army Corps ​still at Rosville Georgia. ", date: "1864-05-01"}),
+(c:Entry {text: "Thursday. – 5th the Division marched one mile south of ​Taylors Rridge; The 34th went back to Ringgold to obain new guns. & got mail Saw some of the 75th", date: "1864-05-05"}),
+(d:Entry {text: "Sunday, 8th Companies A F & B went on picket Saturday evening ​came of Sunday PM & the Regiment was sent to take a position on a hill. Company A deployed as skir​mishers. waded Mill Creek took a hill ​& fought till dark; then went to camp.", date: "1864-05-08"}),
+(b:Entry {text: "Monday, 2nd – Marched to Ringgold distance 12 miles", date: "1864-05-02"}),
+(cA:City {name: "Rosville"}), 
+(cB:City {name: "Ringgold"}),
+(cC:City {name: "Taylors Ridge"}),
+(cD:City {name: "Mill Creek"}),
+(sA:Tag {name: "Versorgung"}),
+(sB:Tag {name: "Bewegung"}),
+(sC:Tag {name: "Kampfhandlung"}),
+(b)-[:HAS]->(sB),
+(c)-[:HAS]->(sA),
+(c)-[:HAS]->(sB),
+(d)-[:HAS]->(sC),
+(a)-[:NEXT]->(b),
+(b)-[:NEXT]->(c),
+(c)-[:NEXT]->(d),
+(a)-[:MENTIONS]->(cA),
+(b)-[:MENTIONS]->(cB),
+(c)-[:MENTIONS]->(cB),
+(c)-[:MENTIONS]->(cC),
+(d)-[:MENTIONS]->(cD)
+
+NEO Queries
+
+//MATCH ON CITY
+MATCH (c:City)<--(e:Entry)
+WHERE c.name = "Ringgold"
+RETURN c,e
+
+//MATCH PREC COMBAT
+MATCH (t:Tag)<--(:Entry)<-[:NEXT]-(e:Entry)
+WHERE t.name = "Kampfhandlung"
+RETURN e
+
+// MATCH PREC COMBAT EXT
+MATCH (t:Tag)<--(:Entry)<-[:NEXT]-(e:Entry)-[:HAS]->(x:Tag)
+WHERE t.name = "Kampfhandlung"
+RETURN e,x
+
+//Drop all
+MATCH (n)
+DETACH DELETE n
+
+LUNR
+
++movement -combat
